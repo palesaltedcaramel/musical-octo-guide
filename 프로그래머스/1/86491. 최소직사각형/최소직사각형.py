@@ -1,13 +1,14 @@
 def solution(sizes):
-    w, h = 0, 0
-    for i, j in sizes: 
-        if j > i: 
-            i, j = j, i 
-        w = max(i, w)
-        h = max(j, h)
-        
-        
-    return w*h
+    return max(max(i) for i in sizes) * max(min(x) for x in sizes)
+
+# def solution(sizes):
+#     w, h = 0, 0
+#     for i, j in sizes: 
+#         if j > i: 
+#             i, j = j, i 
+#         w = max(i, w)
+#         h = max(j, h)
+#     return w*h
     
     
 # def solution(sizes):
